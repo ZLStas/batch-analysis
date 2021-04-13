@@ -73,11 +73,11 @@ object BatchAnalysisWithKMeansAlgo {
 
     // save model
     kmeansModel.write.overwrite()
-      .save("/home/stanslav/Desktop/Diplome/kursova-spark-hbase/src/main/resources/models")
+      .save("/home/stanslav/Desktop/Diplome/batch-analysis/src/main/resources/models")
 
     // load model
     val kmeansModelLoded = KMeansModel
-      .load("/home/stanslav/Desktop/Diplome/kursova-spark-hbase/src/main/resources/models")
+      .load("/home/stanslav/Desktop/Diplome/batch-analysis/src/main/resources/models")
 
     // sample data, it could comes via kafka(through spark streams)
     val df1 = Seq(
